@@ -1,0 +1,364 @@
+#customButton{
+  border: none;
+}
+.btn{
+  background: none;
+  color: #f7f7f7;
+  border:none;
+}
+.btn:hover, .btn:active,.btn:hover::after{
+  background-color: #f7f7f727;
+}
+
+#circle_div{
+  width: 50px;
+  height:50px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.custom-font{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+.bg-color{
+  /*background-color: #0000EB;*/
+  background-color: #3450a1;
+ /*background: linear-gradient(170deg, #bb093d,#ad0938, #960833);  /*Define your duotone colors here */
+   /* Experiment with different blend modes to achieve desired effect */
+}
+
+.bg-color-light{
+  /*background-color: #0000EB;*/
+ background: linear-gradient(90deg, #bb093d,#ad0938, #960833);  /*Define your duotone colors here */
+   /* Experiment with different blend modes to achieve desired effect */
+}
+
+.fg-color-light{
+  color: #fff;
+}
+
+.change-bg:active{
+  color: #246EE9;
+  background-color: #f7f7f7;
+  border: none;
+}
+.form-control:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 0px rgba(255, 100, 255, 0.5);
+  border-color:none;
+}
+#disp-content{
+  --bs-aspect-ratio: 150%;
+  margin-top: 80px; /* Adjust the top navbar height */
+  margin-bottom: 60px; /* Adjust the bottom navbar height */
+  padding: 15px; /* Add padding for content spacing */
+  height: calc(100vh - 140px); /* Calculate the content area height to fit between navbars */
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+
+.fg-color{
+  color: #f7f7f7;
+}
+body{
+  overflow: hidden;
+ background-color: #fff;
+}
+
+/*other css*/
+
+#nav{
+  background-color: #3450a1;
+ /* background: linear-gradient(170deg, #bb093d,#ad0938, #960833);  /*Define your duotone colors here */
+}
+
+#contacts-row{
+  margin-top: 60px;
+  background: transparent;
+}
+
+.chat{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card{
+    background: transparent;
+    border:none;
+
+}
+.contacts_body{
+  padding:  0.75rem 0 !important;
+  overflow-y: auto;
+  white-space: nowrap;
+  background: transparent;
+}
+.msg_card_body{
+  overflow-y: auto;
+}
+
+.card-footer{
+  border:none;
+}
+.container{
+  align-content: center;
+}
+.search{
+  border-radius: 15px 0 0 15px !important;
+  border:0 !important;
+  color:white !important;
+}
+.search:focus{
+     box-shadow:none !important;
+       outline:0px !important;
+}
+
+#msg-input{
+  background-color: #3450a1;
+  /*background: linear-gradient(170deg, #bb093d,#ad0938, #960833);  /*Define your duotone colors here */
+  
+}
+
+.type_msg{
+  background-color: rgba(0,0,0,0.3) !important;
+  border:0 !important;
+  color:white !important;
+  height: 42px !important;
+  overflow-y: auto;
+  border-radius: 15px 0 0 15px !important;
+}
+  .type_msg:focus{
+     box-shadow:none !important;
+       outline:0px !important;
+}
+.attach_btn{
+border-radius: 15px 0 0 15px !important;
+background-color: rgba(0,0,0,0.3) !important;
+  border:0 !important;
+  color: white !important;
+  cursor: pointer;
+}
+.send_btn{
+border-radius: 0 15px 15px 0 !important;
+background-color: transparent;
+  border:0 !important;
+  color: white !important;
+  cursor: pointer;
+}
+.search_btn{
+  border-radius: 0 15px 15px 0 !important;
+  background-color: rgba(0,0,0,0.3) !important;
+  border:0 !important;
+  color: white !important;
+  cursor: pointer;
+}
+.contacts{
+  list-style: none;
+  padding: 0;
+}
+.contacts li{
+  width: 100% !important;
+  padding: 5px 10px;
+  margin-bottom: 15px !important;
+}
+.active{
+  background-color: rgba(0,0,0,0.3);
+}
+
+li:active,li:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.user_img{
+  height: 50px;
+  width: 50px;
+  border:1.5px solid #f5f6fa;
+}
+
+.user_img_msg{
+  height: 20px;
+  width:20px;
+  border:1.5px solid #f5f6fa;
+}
+.back_btn{
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.img_cont{
+  position: relative;
+  height: 50px;
+  width: 60px;
+}
+.img_cont_msg{
+  height: 20px;
+  width: 20px;
+}
+.online_icon{
+position: absolute;
+height: 15px;
+width:15px;
+background-color: #4cd137;
+border-radius: 50%;
+bottom: 0.2em;
+right: 0.4em;
+border:1.5px solid white;
+}
+.offline{
+background-color: #c23616 !important;
+}
+.user_info{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 15px;
+}
+.user_info span{
+font-size: 20px;
+color: white;
+}
+.user_info p{
+font-size: 10px;
+color: rgba(255,255,255,0.6);
+}
+.video_cam{
+margin-left: 50px;
+margin-top: -5px;
+}
+.video_cam span{
+color: white;
+font-size: 20px;
+cursor: pointer;
+margin-right: 20px;
+}
+.msg_cotainer{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 5px;
+border-radius: 15px;
+background-color: rgb(252, 216, 100);
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+position: relative;
+font-size: 15px;
+}
+
+.date_card{
+  background-color: #6e649e !important;
+  color:#fff;
+  padding: 10px;
+  font-size: small;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.msg_cotainer_send{
+margin-top: auto;
+margin-bottom: auto;
+margin-right: 5px;
+border-radius: 15px;
+background-color: #78e08f;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+position: relative;
+font-size: 15px;
+}
+
+.msg_time{
+  color: rgb(102, 99, 99);
+  font-size: 10px;
+  height: 10px;
+  text-align: end;
+}
+.msg_time_send{
+color: rgb(102, 99, 99);
+font-size: 10px;
+height: 10px;
+text-align: end;
+}
+.msg_head{
+position: relative;
+}
+#action_menu_btn{
+position: absolute;
+right: 10px;
+top: 10px;
+color: white;
+cursor: pointer;
+font-size: 20px;
+}
+.action_menu{
+z-index: 1;
+position: absolute;
+padding: 15px 0;
+background-color: rgba(0,0,0,0.5);
+color: white;
+border-radius: 15px;
+top: 30px;
+right: 15px;
+display: none;
+}
+.action_menu ul{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.action_menu ul li{
+width: 100%;
+padding: 10px 15px;
+margin-bottom: 5px;
+}
+.action_menu ul li i{
+padding-right: 10px;
+
+}
+.action_menu ul li:hover{
+cursor: pointer;
+background-color: rgba(0,0,0,0.2);
+}
+
+#myBtn{
+  background-color: rgba(0,0,0,0.3) !important;
+  border-radius: 0 15px 15px 0 !important;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FF6C22;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.nav-item.dropdown {
+  padding-right: 0; 
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+@media(max-width: 576px){
+.contacts_card{
+margin-bottom: 15px !important;
+}
+}

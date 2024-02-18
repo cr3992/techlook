@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Search</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .form-control:focus {
+            border-color: white;
+            box-shadow: 0 0 0 0rem rgba(0, 0, 0, 0.25); 
+        }
+    </style>
+    <script>
+        const file_list = [];
+        const search_data = [];
+        
+        function fetchDataFromFile() {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'assets/textFiles/search_index.txt', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            const lines = xhr.responseText.split('\n');
+                            lines.forEach(function (line) {
+                                if (line.trim() !== '') {
+                                    file_list.push(line);
+                                }
+                            });
+                            resolve();
+                        } else {
+                            reject('Failed to fetch search_index.txt');
+                        }
+                    }
+                };
+                xhr.send();
+            });
+        }
+    
+        function fetchDataForFile(file) {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'assets/textFiles/' + file + '.txt', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            const content = xhr.responseText;
+    
+                            // Split the content into lines
+                            const lines = content.split('\n');
+    
+                            // Process each line and extract 'heading' and 'link'
+                            lines.forEach(line => {
+                                const data = line.trim().split('|');
+                                const heading = data[0];
+                                const link = data[1];
+                                if (heading && link) {
+                                    search_data.push({ heading, link });
+                                }
+                            });
+                            resolve();
+                        } else {
+                            reject('Failed to fetch data from ' + file);
+                        }
+                    }
+                };
+                xhr.send();
+            });
+        }
+        // Usage
+        fetchDataFromFile()
+            .then(() => {
+                // Iterate over each file and fetch data
+                const promises = file_list.map(file => fetchDataForFile(file));
+    
+                // Wait for all promises to resolve
+                Promise.all(promises)
+                    .then(() => {
+                        // All data has been fetched successfully
+                        console.log(search_data);
+                    })
+                    .catch(error => {
+                        // Handle errors from fetchDataForFile
+                        console.error(error);
+                    });
+            })
+            .catch(error => {
+                // Handle errors from fetchDataFromFile
+                console.error(error);
+            });
+    </script>
+    
+</head>
+ 
+<body onkeyup="search()">
+    <nav class="text-center shadow navbar navbar-light navbar-expand-md fixed-top bg-color" style="font-weight: bold;color: #f9ebcd;">
+        <div class="input-group pulse animated mt-2 mb-2 mx-2">
+            <a class="btn px-3 text-center" type="button" id="button-addon2"  style="background-color:#ffffff;color:#3450a1;border-top-left-radius: 20px;border-bottom-left-radius: 20px;"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <input type="text" class="form-control" id="searchInput" placeholder="Search" aria-label="" aria-describedby="button-addon2" style="border-top-right-radius:20px;border-bottom-right-radius:20px;">
+        </div>
+    </nav>
+
+    <div class="mt-4 pt-5" id="articleContainer">
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script>
+        const backBtn = document.getElementById('button-addon2');
+        backBtn.setAttribute("href", "index.html?fn="+sessionStorage.getItem('currentPage'));
+        const articleContainer = document.getElementById('articleContainer');
+        document.getElementById('searchInput').focus();
+        function search(){
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            if(query!==''){
+                const results = search_data.filter(item => item.heading.toLowerCase().includes(query));
+                articleContainer.innerHTML = '';
+                results.forEach(result => {
+                    const articleCard = createArticleCard(result.heading,result.link);
+                    articleContainer.appendChild(articleCard);
+                });
+            }else{
+                articleContainer.innerHTML = '';
+            }
+        }
+
+        function createArticleCard(heading,link) {
+            const cardLink = document.createElement('a');
+            cardLink.href = link;
+            cardLink.target = "_top";
+        
+            const cardRow = document.createElement('div');
+            cardRow.className = 'row border-bottom pt-2 shadow slideInDown animated';
+            cardRow.style.backgroundColor = "#ffffff";
+            cardRow.style.color = "#73325c"
+        
+            const symbolDiv = document.createElement('div');
+            symbolDiv.className = 'col-2 text-end';
+        
+            const symbolSpan = document.createElement('span');
+            symbolSpan.className = 'material-symbols-outlined';
+            symbolSpan.textContent = 'search';
+        
+            symbolDiv.appendChild(symbolSpan);
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.className = 'col-8';
+        
+            const headingSpan = document.createElement('p');
+            headingSpan.textContent = heading;
+        
+            headingDiv.appendChild(headingSpan);
+            cardRow.appendChild(symbolDiv);
+            cardRow.appendChild(headingDiv);
+            cardLink.appendChild(cardRow);
+        
+            return cardLink;
+        }
+
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>notifications</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="overflow-y:auto;">
+    <nav class="text-center shadow navbar navbar-light navbar-expand-md fixed-top" style="font-weight: bold;background: #73325c;color: #f9ebcd;">
+        <div class="input-group mx-2">
+            <a class="btn px-4" type="button" id="button-addon2" href="index.html"  style="background-color:#73325c;color:#f9ebcd;"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <span class="material-symbols-outlined mt-1 px-2 tada animated ">notifications</span> 
+            <label for="" style="font-size:20px;font-weight:normal;">Notifications</label>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5 pt-5" id="articleContainer">
+    </div>
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script>
+        const backBtn = document.getElementById('button-addon2');
+        backBtn.setAttribute("href", "index.html?fn="+sessionStorage.getItem('currentPage'));
+        document.addEventListener('DOMContentLoaded', function () {
+            const articleContainer = document.getElementById('articleContainer');
+        
+            // AJAX request to fetch article headings
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'assets/textFiles/index/notification_index.txt', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const lines = xhr.responseText.split('\n');
+                    lines.forEach(function (line) {
+                        if (line.trim() !== '') {
+                            const parts = line.split('|'); // Split by a delimiter, e.g., '|'
+                            const date = parts[1];
+                            const heading = parts[2];     // need to write the article number|heading|pagelocation
+                            const contentfile = parts[3]; // filename of content of article 
+            
+                            const articleCard = createArticleCard(date,heading, contentfile);
+                            if(articleCard){
+                                articleContainer.appendChild(articleCard);
+                            }
+                        }
+                    });
+                }
+            };
+            xhr.send();
+        
+            // Function to create a card element for each article heading
+            function createArticleCard(date,heading,contentfile) {
+                const cardLink = document.createElement('a');
+                cardLink.href = 'display.html?heading=' + encodeURIComponent(heading) + '&contentfile=' + encodeURIComponent(contentfile);
+                cardLink.target = "_top";
+            
+                const cardRow = document.createElement('div');
+                cardRow.className = 'row border-bottom py-2 bg-light shadow rounded-2 mt-1 mx-2 zoomIn animated';
+                cardRow.style.color = "#73325c"
+                cardRow.style.height = "90px";
+
+                const dateDiv = document.createElement('div');
+                dateDiv.className = 'col-1 text-start';
+            
+                const dateSpan = document.createElement('span');
+                dateSpan.className = 'badge bg-light text-muted text-start';
+                dateSpan.textContent = date;
+                dateSpan.style.fontSize = "10px";
+            
+                dateDiv.appendChild(dateSpan);
+            
+                const symbolDiv = document.createElement('div');
+                symbolDiv.className = 'col-2 text-end';
+            
+                const symbolSpan = document.createElement('span');
+                symbolSpan.className = 'material-symbols-outlined mt-1';
+                symbolSpan.textContent = 'new_releases';
+            
+                symbolDiv.appendChild(symbolSpan);
+            
+                const headingDiv = document.createElement('div');
+                headingDiv.className = 'col-10';
+            
+                const headingSpan = document.createElement('span');
+                headingSpan.textContent = heading;
+            
+                headingDiv.appendChild(headingSpan);
+
+                cardRow.appendChild(dateSpan);
+                cardRow.appendChild(symbolDiv);
+                cardRow.appendChild(headingDiv);
+                cardLink.appendChild(cardRow);
+            
+                if(isDateInPreviousWeek(date)){
+                    return cardLink;
+                }else{
+                    return false;
+                }
+            }
+        });
+
+        function isDateInPreviousWeek(targetDate) {
+            if(targetDate.charAt(0)=='0'){
+                targetDate = targetDate.slice(1);
+            }
+            const currentDate = new Date();
+            
+            for (let i = 6; i >= 0; i--) {
+                const previousDate = new Date(currentDate);
+                previousDate.setDate(currentDate.getDate() - i);
+        
+                const day = previousDate.getDate();
+                const month = previousDate.getMonth() + 1; // Months are zero-based
+                const year = previousDate.getFullYear();
+        
+                const formattedDate = `${day}/${month}/${year}`;
+                if (formattedDate === targetDate) {
+                    return true;
+                }
+            }
+        
+            return false;
+        }
+        
+       
+        
+        
+    </script>
+</body>
+
+</html>

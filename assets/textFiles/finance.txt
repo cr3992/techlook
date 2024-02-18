@@ -1,0 +1,16 @@
+Finology Ticker|https://ticker.finology.in/|#0078ff|donut_large
+Screener|https://www.screener.in/|#77d611|signal_cellular_alt
+IPO Watch|https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/|#00b63f|monitoring
+Global Market|https://www.moneycontrol.com/markets/global-indices/|#006baa|bid_landscape
+NSE India|https://www.nseindia.com/market-data/live-equity-market|#e66f25|stat_0
+BSE India|https://www.bseindia.com/markets/Equity/equitysensexstream.html|#22376c|stat_0
+Economic Times|https://economictimes.indiatimes.com/markets/stocks|#101723|newspaper
+Tickertape|https://www.tickertape.in/|#151e28|category
+Stock Edge|https://web.stockedge.com/app/equities|#21427f|attach_money
+Super Investors|https://ticker.finology.in/investor|#0078ff|donut_large
+Equity Sector|https://ticker.finology.in/sector|#0078ff|donut_large
+Bulk Deals|https://www.moneycontrol.com/stocks/marketstats/bulk-deals/nse/|#006baa|bid_landscape
+Fixed Deposit|https://www.angelone.in/calculators/fd-calculator|#006baa|calculate
+SIP|https://www.angelone.in/calculators/sip-calculator|#00aa17|calculate
+Lumpsum|https://www.angelone.in/calculators/lumpsum-calculator|#d30808|calculate
+EMI|https://www.angelone.in/calculators/emi-calculator|#d37808|calculate

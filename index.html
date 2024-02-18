@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Techlook</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        #disp-content{
+            display: none;
+        }
+        .button-text{
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header Start-->
+    <nav class="text-center shadow navbar navbar-light navbar-expand-md fixed-top bg-color" id="header" style="font-weight: bold;">
+        <div class="container-fluid"><a class="navbar-brand fg-color" href="index.html" ><img src="assets/img/logo.png" alt="Anonymous" class="img-fluid" width="40px;">TechLook</a>
+            <a class="btn rotateIn animated"  type="search" href="search.html"><span class="material-symbols-outlined">search</span></a>
+            <a class="btn shake animated" type="button" href="notifications.html"><span class="material-symbols-outlined">notifications</span></a>
+        </div>
+    </nav>
+    <!--Header End-->
+
+
+    <!--Content Section-->
+    <div class="ratio ratio-16x9" id="disp-content">
+        <iframe src="" id="dispframe" title="" allowfullscreen></iframe>
+    </div>
+
+
+
+
+    <!--Footer Start-->
+    <nav class="navbar navbar-light navbar-expand-md fixed-bottom bg-color fg-color" id="footer">
+        <div class="container-fluid">
+            <button class="btn change-bg" id="home" type="button" onclick="btnClick('home')">
+                <span class="material-symbols-outlined">home</span>
+                <div class="button-text">Home</div>
+            </button >
+            <button class="btn change-bg" id="ai" type="button" onclick="btnClick('ai')">
+                <span><svg aria-hidden="true" focusable="false" width="20" height="20" style="margin-bottom:10px;" data-prefix="fas" data-icon="sparkles" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="unchecked-icon svg-inline--fa fa-sparkles fa-fw"><path fill="currentColor" d="M327.5 85.2c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L384 128l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L448 128l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L448 64 426.8 7.5C425.1 3 420.8 0 416 0s-9.1 3-10.8 7.5L384 64 327.5 85.2zM205.1 73.3c-2.6-5.7-8.3-9.3-14.5-9.3s-11.9 3.6-14.5 9.3L123.3 187.3 9.3 240C3.6 242.6 0 248.3 0 254.6s3.6 11.9 9.3 14.5l114.1 52.7L176 435.8c2.6 5.7 8.3 9.3 14.5 9.3s11.9-3.6 14.5-9.3l52.7-114.1 114.1-52.7c5.7-2.6 9.3-8.3 9.3-14.5s-3.6-11.9-9.3-14.5L257.8 187.4 205.1 73.3zM384 384l-56.5 21.2c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L384 448l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L448 448l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L448 384l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L384 384z" class=""></path></svg></span>
+                <div class="button-text">AI Tools</div>
+            </button>
+            <button class="btn change-bg" id="finance" type="button" onclick="btnClick('finance')">
+                <span class="material-symbols-outlined">finance_mode</span>
+                <div class="button-text">Finance</div>
+            </button >
+            <button class="btn change-bg" id="apps" type="button" onclick="btnClick('apps')">
+                <span class="material-symbols-outlined">apps</span>
+                <div class="button-text">Apps</div>
+            </button >
+            <button class="btn change-bg" id="menu" type="button" onclick="btnClick('menu')">
+                <span class="material-symbols-outlined">menu</span>
+                <div class="button-text">Menu</div>
+            </button>
+        </div>
+    </nav>
+    <!--Footer End-->
+
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    
+    <script>
+        var dispframe = document.getElementById('dispframe');
+        var disp_content = document.getElementById("disp-content");
+        var homeBtn = document.getElementById("home");
+        var aiBtn = document.getElementById("ai");
+        var financeBtn = document.getElementById("finance");
+        var appsBtn = document.getElementById("apps");
+        var menuBtn = document.getElementById("menu");
+        var tabpane = document.getElementById("tabpane");
+        var subBtnName='';
+        
+        
+        window.onload = function(){
+            disp_content.style.display="block";
+            const urlParams = new URLSearchParams(window.location.search);
+            const fnName = urlParams.get('fn');
+            if(fnName){
+                btnClick(fnName);
+            }else{
+                btnClick('home');
+            }
+            
+        }
+        function content(filename){
+            sessionStorage.setItem('currentPage',filename);
+            if(filename=='menu'){
+                dispframe.setAttribute("src","menu.html");
+            }else{
+                dispframe.setAttribute("src","browser.html?fn="+filename);
+            }
+            disp_content.classList.remove("d-none");
+        }
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+          }
+        function btnClick(name){ 
+            homeBtn.style.borderTop = "none";
+            aiBtn.style.borderTop = "none";
+            financeBtn.style.borderTop = "none";
+            appsBtn.style.borderTop = "none";
+            menuBtn.style.borderTop = "none";
+            homeBtn.style.color="#f7f7f7";
+            aiBtn.style.color="#f7f7f7";
+            financeBtn.style.color="#f7f7f7";
+            appsBtn.style.color="#f7f7f7";
+            menuBtn.style.color="#f7f7f7";
+
+            if(name=='home'){
+                homeBtn.style.borderTop = "solid 3px #f7f7f7";
+                homeBtn.style.color="#f7f7f7";
+            }else if(name=='ai'){
+                aiBtn.style.borderTop = "solid 3px #f7f7f7";
+                aiBtn.style.color="#f7f7f7";
+            }else if(name=='finance'){
+                financeBtn.style.borderTop = "solid 3px #f7f7f7";
+                financeBtn.style.color="#f7f7f7";
+            }else if(name=='apps'){
+                appsBtn.style.borderTop = "solid 3px #f7f7f7";
+                appsBtn.style.color="#f7f7f7";
+            }else if(name=='menu'){
+                menuBtn.style.borderTop = "solid 3px #f7f7f7";
+                menuBtn.style.color="#f7f7f7";
+            }
+            content(name);
+        }
+    </script>
+</body>
+
+</html>

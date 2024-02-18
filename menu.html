@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Menu</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="fadeInUp animated">
+
+    <!--Content Section Start-->
+    <div class="card px-2 mx-3 shadow" style="width: auto;margin-top:40px;margin-bottom:30px;background-color: #3450a1">
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col-7" style="color:#f9ebcd;">
+                    <h6 class="card-title mt-3">Chandan Maurya</h6>
+                    <p class="card-text" style="font-size:10px;">chandanmaurya766@gmail.com</p>
+                </div>
+                <div class="col-5">
+                    <img src="assets/img/robot.jpg" alt="Image Description" class="img-fluid border border-2 rounded-circle" style="width: 80px;height: 80px;border-color: #f9ebcd">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-4" style="height: 400px;overflow:auto;">
+        <a href="instructions.html" target="_top">
+            <div class="row  border-bottom border-light py-2">
+                <div class="col-2">
+                    <span class="material-symbols-outlined" id="fg">description</span>
+                </div>
+                <div class="col-8">
+                    <span id="fg">Instructions</span>
+                </div>
+                <div class="col-2 text-end">
+                    <span class="material-symbols-outlined" id="fg">chevron_right</span>
+                </div>
+            </div>
+        </a>
+        <a href="bmiCalculator.html" target="_top">
+            <div class="row  border-bottom border-light py-2">
+                <div class="col-2">
+                    <span class="material-symbols-outlined" id="fg">calculate</span>
+                </div>
+                <div class="col-8">
+                    <span id="fg">BMI Calculator</span>
+                </div>
+                <div class="col-2 text-end">
+                    <span class="material-symbols-outlined" id="fg">chevron_right</span>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="row  border-bottom border-light py-2">
+                <div class="col-2">
+                    <span class="material-symbols-outlined" id="fg">settings</span>
+                </div>
+                <div class="col-8">
+                    <span id="fg">Settings</span>
+                </div>
+                <div class="col-2 text-end">
+                    <span class="material-symbols-outlined" id="fg">chevron_right</span>
+                </div>
+            </div>
+        </a>
+        <a href="feedback.html" target="_top">
+            <div class="row  border-bottom border-light py-2">
+                <div class="col-2">
+                    <span class="material-symbols-outlined" id="fg">chat</span>
+                </div>
+                <div class="col-8">
+                    <span id="fg">Feedback and Support</span>
+                </div>
+                <div class="col-2 text-end">
+                    <span class="material-symbols-outlined" id="fg">chevron_right</span>
+                </div>
+            </div>
+        </a>
+        <a onclick="copyToClipboard()">
+            <div class="row  border-bottom border-light py-2">
+                <div class="col-2">
+                    <span class="material-symbols-outlined" id="fg">share</span>
+                </div>
+                <div class="col-8">
+                    <span id="fg"> Share</span>
+                </div>
+                <div class="col-2 text-end">
+                    <span class="material-symbols-outlined" id="fg">chevron_right</span>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="row  border-bottom border-light py-2">
+                <div class="col-2">
+                    <span class="material-symbols-outlined" id="fg">info</span>
+                </div>
+                <div class="col-8">
+                    <span id="fg">About</span>
+                </div>
+                <div class="col-2 text-end">
+                    <span class="material-symbols-outlined" id="fg">chevron_right</span>
+                </div>
+            </div>
+        </a>
+
+
+    </div>
+    <!--Content Section End-->
+
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script>
+        function home(){
+            document.getElementById("article_div").style.border = "none";
+            document.getElementById("home_div").style.borderBottom = "solid 3px #f9ebcd";
+        }
+        function article(){
+            document.getElementById("home_div").style.border = "none";
+            document.getElementById("article_div").style.borderBottom = "solid 3px #f9ebcd";
+        }
+
+        function shareUrl() {
+            if (navigator.share) {
+                navigator.share({
+                title: 'Share',
+                text: 'Stay Healthy',
+                url: 'https://drive.google.com/file/d/17UbohEEyxEiQjLJzO8ntepeOPf1hQtb7/view?usp=sharing'
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+            } else {
+        // Fallback for browsers that do not support Web Share API
+                const shareUrl = 'https://drive.google.com/file/d/17UbohEEyxEiQjLJzO8ntepeOPf1hQtb7/view?usp=sharing';
+            // You can implement your own logic here, like opening a modal with the link for users to copy
+            }
+        }
+
+        function copyToClipboard() {
+            const textToCopy = "https://drive.google.com/file/d/17UbohEEyxEiQjLJzO8ntepeOPf1hQtb7/view?usp=sharing";
+            
+            // Create a temporary textarea element to hold the text
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            
+            // Select the text in the textarea
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); /* For mobile devices */
+            
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            
+            // Remove the temporary textarea
+            document.body.removeChild(textarea);
+      
+            // Provide some visual feedback (you can customize this part)
+            alert('App Link has been copied!');
+          }
+    </script>
+</body>
+
+</html>
