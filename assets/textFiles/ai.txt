@@ -1,5 +1,6 @@
-Gemini Chat |gemini.html|#3450a1|donut_large
+Gemini Chat |gemini.html|#3450a1|chat
 ChatGPT |https://chat.openai.com/|#0078ff|stat_0
 Eleven Labs |https://elevenlabs.io/|#00b63f|star
 Gemini |https://gemini.google.com/app|#21427f|star_half
 Illusion Diffusion |https://huggingface.co/spaces/AP123/IllusionDiffusion|#fbbc04|mood
+ChatGPT Chat |chatgpt.html|#7c9b9f|chat
