@@ -1,4 +1,4 @@
-home |https://cr3992.github.io/radio/|#fbbc04|radio
+Radio |https://cr3992.github.io/radio/|#ed1f24|radio
 home |https://ticker.finology.in/|#0078ff|donut_large
 home |https://ticker.finology.in/|#0078ff|donut_large
 home |https://ticker.finology.in/|#0078ff|donut_large
