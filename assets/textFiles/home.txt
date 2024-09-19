@@ -1,5 +1,5 @@
 Radio |https://cr3992.github.io/radio/|#ed1f24|radio
-home |https://ticker.finology.in/|#0078ff|donut_large
+Bmtc |https://cr3992.github.io/bmtc/|#003e92|directions_bus
 home |https://ticker.finology.in/|#0078ff|donut_large
 home |https://ticker.finology.in/|#0078ff|donut_large
 home |https://ticker.finology.in/|#0078ff|donut_large
