@@ -12,9 +12,9 @@
 </head>
 
 <body style="overflow-y:auto;">
-    <nav class="text-center shadow navbar navbar-light navbar-expand-md fixed-top" style="font-weight: bold;background: #73325c;color: #f9ebcd;">
-        <div class="input-group mx-2">
-            <a class="btn px-4" type="button" id="button-addon2" href="index.html"  style="background-color:#73325c;color:#f9ebcd;"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+    <nav class="text-center shadow navbar navbar-light navbar-expand-md fixed-top bg-color" style="font-weight: bold;">
+        <div class="input-group mx-2 fg-color">
+            <a class="btn px-4" type="button" id="button-addon2" href="index.html" ><span class="material-symbols-outlined">arrow_back_ios</span></a>
             <span class="material-symbols-outlined mt-1 px-2 tada animated ">notifications</span> 
             <label for="" style="font-size:20px;font-weight:normal;">Notifications</label>
         </div>
@@ -35,7 +35,7 @@
         
             // AJAX request to fetch article headings
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'assets/textFiles/index/notification_index.txt', true);
+            xhr.open('GET', 'assets/textFiles/notification_index.txt', true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     const lines = xhr.responseText.split('\n');
@@ -44,7 +44,7 @@
                             const parts = line.split('|'); // Split by a delimiter, e.g., '|'
                             const date = parts[1];
                             const heading = parts[2];     // need to write the article number|heading|pagelocation
-                            const contentfile = parts[3]; // filename of content of article 
+                            const contentfile = parts[3]; // 
             
                             const articleCard = createArticleCard(date,heading, contentfile);
                             if(articleCard){
@@ -59,12 +59,12 @@
             // Function to create a card element for each article heading
             function createArticleCard(date,heading,contentfile) {
                 const cardLink = document.createElement('a');
-                cardLink.href = 'display.html?heading=' + encodeURIComponent(heading) + '&contentfile=' + encodeURIComponent(contentfile);
+               // cardLink.href = 'index.html?heading=' + encodeURIComponent(heading) + '&contentfile=' + encodeURIComponent(contentfile);
                 cardLink.target = "_top";
             
                 const cardRow = document.createElement('div');
                 cardRow.className = 'row border-bottom py-2 bg-light shadow rounded-2 mt-1 mx-2 zoomIn animated';
-                cardRow.style.color = "#73325c"
+                cardRow.style.color = "#3450a1"
                 cardRow.style.height = "90px";
 
                 const dateDiv = document.createElement('div');
