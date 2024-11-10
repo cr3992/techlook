@@ -1,3 +1,4 @@
 Radio|https://cr3992.github.io/radio/|#ed1f24|radio
 Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
+ChatGPT Chat |chatgpt.html|#7c9b9f|chat
