@@ -1,4 +1,3 @@
-Radio|https://cr3992.github.io/radio/|#ed1f24|radio
 Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
 Secure Chat|https://cr3992.github.io/secure-chat/|#584e8f|contact_support
@@ -8,5 +7,11 @@ Trading Calculator|https://cr3992.github.io/trading-calculator/|#173a55|trending
 Sip Calculator|https://cr3992.github.io/sip-calculator/|#25793b|calculate
 Lumpsum Calculator|https://cr3992.github.io/lumpsum-calculator/|#970000|calculate
 Stoploss Calculator|https://cr3992.github.io/stoploss-calculator/|#ff0000|calculate
-Stay Healthy|https://cr3992.github.io/stay-healthy/|#73325c|mood
+Stay Healthy|https://cr3992.github.io/stay-healthy/|#73325c|heart_plus
 Superdeals|https://superdeals83.github.io/superdeals/|#333333|shopping_cart
+Bhumap|https://chandan766.github.io/bhumap/|#20365d|square_foot
+Calculator|https://cr3992.github.io/calculator/|#0e0c0c|calculate
+Calculator Download|https://sites.google.com/view/calculatorapk/home|#6600b4|tabs
+Radio|https://cr3992.github.io/radio/|#ed1f24|radio
+Radio Download|https://sites.google.com/view/radiostreamsapk/home|#ffab00|tabs
+
