@@ -2,6 +2,8 @@ Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
 Secure Chat|https://cr3992.github.io/secure-chat/|#584e8f|contact_support
 Ai WhatsApp|https://cr3992.github.io/aiwhatsapp/|#009788|contact_support
+Gemini Chat |gemini.html|#3450a1|chat
+ChatGPT Chat |chatgpt.html|#7c9b9f|chat
 Investment Calculator|https://cr3992.github.io/investment-calculator/|#173a55|savings
 Trading Calculator|https://cr3992.github.io/trading-calculator/|#173a55|trending_up
 Sip Calculator|https://cr3992.github.io/sip-calculator/|#25793b|calculate
@@ -14,4 +16,3 @@ Calculator|https://cr3992.github.io/calculator/|#0e0c0c|calculate
 Calculator Download|https://sites.google.com/view/calculatorapk/home|#6600b4|tabs
 Radio|https://cr3992.github.io/radio/|#ed1f24|radio
 Radio Download|https://sites.google.com/view/radiostreamsapk/home|#ffab00|tabs
-
