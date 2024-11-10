@@ -1,4 +1,8 @@
 Radio|https://cr3992.github.io/radio/|#ed1f24|radio
 Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
-ChatGPT Chat |chatgpt.html|#7c9b9f|chat
+Investment Calculator|https://cr3992.github.io/investment-calculator/|#173a55|savings
+Secure Chat|https://cr3992.github.io/secure-chat/|#584e8f|contact_support
+Sip Calculator|https://cr3992.github.io/sip-calculator/|#25793b|calculate
+Lumpsum Calculator|https://cr3992.github.io/lumpsum-calculator/|#970000|calculate
+Stay Healthy|https://cr3992.github.io/stay-healthy/|#73325c|mood
