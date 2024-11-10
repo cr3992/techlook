@@ -1,4 +1,16 @@
-Radio|https://cr3992.github.io/radio/|#ed1f24|radio
+Gemini Chat |gemini.html|#3450a1|chat
+ChatGPT Chat |chatgpt.html|#7c9b9f|chat
 Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
-ChatGPT Chat |chatgpt.html|#7c9b9f|chat
+Secure Chat|https://cr3992.github.io/secure-chat/|#584e8f|contact_support
+Ai WhatsApp|https://cr3992.github.io/aiwhatsapp/|#009788|contact_support
+Investment Calculator|https://cr3992.github.io/investment-calculator/|#173a55|savings
+Trading Calculator|https://cr3992.github.io/trading-calculator/|#173a55|trending_up
+Sip Calculator|https://cr3992.github.io/sip-calculator/|#25793b|calculate
+Lumpsum Calculator|https://cr3992.github.io/lumpsum-calculator/|#970000|calculate
+Stoploss Calculator|https://cr3992.github.io/stoploss-calculator/|#ff0000|calculate
+Superdeals|https://superdeals83.github.io/superdeals/|#333333|shopping_cart
+Bhumap|https://chandan766.github.io/bhumap/|#20365d|square_foot
+Calculator|https://cr3992.github.io/calculator/|#0e0c0c|calculate
+Radio|https://cr3992.github.io/radio/|#ed1f24|radio
+Economic Times|https://economictimes.indiatimes.com/markets/stocks|#101723|newspaper
