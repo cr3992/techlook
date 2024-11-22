@@ -1,6 +1,6 @@
 Gemini Chat |gemini.html|#3450a1|chat
 ChatGPT Chat |chatgpt.html|#7c9b9f|chat
-Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
+Stay Healthy|https://cr3992.github.io/stay-healthy/|#73325c|heart_plus
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
 Secure Chat|https://cr3992.github.io/secure-chat/|#584e8f|contact_support
 Ai WhatsApp|https://cr3992.github.io/aiwhatsapp/|#009788|contact_support
