@@ -21,13 +21,15 @@
 			overflow-y: auto;
 		}
 		.image-container img {
-			/*max-width: 100%;
-			height: auto;*/
+			max-width: 100%;
+			height: auto;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
 		}
 		.image-container {
 			max-width: 500px;
+   max-height: 500px;
+   overflow:hidden;
 		}
 		.download-btn {
 			background-color: black;
@@ -199,8 +201,8 @@
         
             var img = document.createElement('img');
             img.src = imageUrl;
-img.style.maxWidth = '250px';
-img.style.maxHeight = '250px';
+/*img.style.maxWidth = '250px';
+img.style.maxHeight = '250px';*/
             img.classList.add('shadow');
             img.alt = "Image from Unsplash";
         
