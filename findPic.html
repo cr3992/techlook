@@ -28,8 +28,7 @@
 		}
 		.image-container {
 			max-width: 500px;
-   /*max-height: 500px;*/
-   overflow:hidden;
+   			overflow:hidden;
 		}
 		.download-btn {
 			background-color: black;
@@ -201,17 +200,15 @@
         
             var img = document.createElement('img');
             img.src = imageUrl;
-/*img.style.maxWidth = '250px';
-img.style.maxHeight = '250px';*/
             img.classList.add('shadow');
             img.alt = "Image from Unsplash";
         
             imageContainer.appendChild(img);
         
-            var timeSpan = document.createElement('p');
+           /* var timeSpan = document.createElement('p');
             timeSpan.classList.add('msg_time');
             timeSpan.textContent = time;
-            timeSpan.style.textAlign = "end";
+            timeSpan.style.textAlign = "end";*/
         
             msgContainer.appendChild(imageContainer);
             // msgContainer.appendChild(timeSpan);
@@ -228,7 +225,21 @@ img.style.maxHeight = '250px';*/
             var downloadBtn = document.createElement('button');
             downloadBtn.textContent = 'Download';
             downloadBtn.classList.add('download-btn');
-            downloadBtn.onclick = () => window.open(imageUrl, '_blank');
+            // downloadBtn.onclick = () => window.open(imageUrl, '_blank');
+		 downloadBtn.onclick = () => {
+                // Copy the image URL to the clipboard
+                navigator.clipboard.writeText(imageUrl)
+                    .then(() => {
+                        downloadBtn.textContent = 'Copied';
+                    })
+                    .catch((error) => {
+                        console.error('Error copying to clipboard:', error);
+                        downloadBtn.textContent = 'Error!';
+                    });
+                    setTimeout(() => {
+                        downloadBtn.textContent = 'Copy Link';
+                    }, 3000);
+                };
             imageContainer.appendChild(downloadBtn);
         }
 
