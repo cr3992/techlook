@@ -12,7 +12,8 @@ Stay Healthy|https://cr3992.github.io/stay-healthy/|#73325c|heart_plus
 Superdeals|https://superdeals83.github.io/superdeals/|#333333|shopping_cart
 Bhumap|https://chandan766.github.io/bhumap/|#20365d|square_foot
 Calculator|https://cr3992.github.io/calculator/|#0e0c0c|calculate
-Calculator Download|https://sites.google.com/view/calculatorapk/home|#6600b4|tabs
+FindPic|findPic.html|#0153c3|chat
 Radio|https://cr3992.github.io/radio/|#ed1f24|radio
+Calculator Download|https://sites.google.com/view/calculatorapk/home|#6600b4|tabs
 Radio Download|https://sites.google.com/view/radiostreamsapk/home|#ffab00|tabs
 Bmtc|https://cr3992.github.io/bmtc/|#003e92|directions_bus
