@@ -50,7 +50,9 @@
             background-color: #88e3fe;
         }
         .msg_cotainer{
-            background-color: #f5f5f5;
+/*             background-color: #f5f5f5; */
+	    background-color: white;
+            box-shadow: 0px 0px 12px gray;
         }
         #msg-input{
             background-color: #0153c3;
@@ -191,7 +193,7 @@
             container.style = "margin-right: 30px;";
         
             var msgContainer = document.createElement('div');
-            msgContainer.classList.add('msg_cotainer','p-2');
+            msgContainer.classList.add('msg_cotainer','p-1');
             msgContainer.style.maxWidth = "250px";
           //  msgContainer.style.maxHeight = "250px";
         
@@ -223,8 +225,8 @@
             
             // Add download button below the image
             var downloadBtn = document.createElement('button');
-            downloadBtn.textContent = 'Download';
-            downloadBtn.classList.add('download-btn');
+            downloadBtn.textContent = 'Copy Link';
+            downloadBtn.classList.add('download-btn','mb-0');
             // downloadBtn.onclick = () => window.open(imageUrl, '_blank');
 		 downloadBtn.onclick = () => {
                 // Copy the image URL to the clipboard
