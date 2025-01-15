@@ -1,6 +1,7 @@
 Placement|https://cr3992.github.io/placement/|#a03dce|local_library
 Secure Chat|https://cr3992.github.io/secure-chat/|#584e8f|contact_support
 Ai WhatsApp|https://cr3992.github.io/aiwhatsapp/|#009788|contact_support
+Jarvis|jarvis.html|#003366|chat
 Gemini Chat |gemini.html|#3450a1|chat
 ChatGPT Chat |chatgpt.html|#7c9b9f|chat
 Investment Calculator|https://cr3992.github.io/investment-calculator/|#173a55|savings
